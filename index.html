@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stop Being Single and Mingle</title>
+    <style>
+        /* Your existing CSS here... */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #77D8D8; /* Seafoam */
+            color: #152614; /* Green */
+        }
+
+        header {
+            background-color: #77D8D8;
+            color: #152614;
+            padding: 10px 0;
+            text-align: center; 
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #FF7F50;
+        }
+
+        #nameSection {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #fefefe;
+        }
+
+        #nameSection input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #nameSection button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #152614;
+            color: white;
+            margin-left: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        /* Congratulatory Message */
+        #congratsMessage {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #fefefe;
+            display: none; /* Initially hidden */
+            font-size: 1.5em; /* Larger font size */
+            color: #152614; /* Green */
+            font-weight: bold; /* Bold text */
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing HTML here... -->
+    <header>
+        <h1>Welcome to "Stop Being Single and Mingle"</h1>
+        <img src=".\images\logo.jpg" height="200" alt="Heart logo" />
+    </header>
+    
+    <nav>
+        <a href=".\about.html">About</a> |
+        <a href=".\services.html">Services</a> |
+        <a href=".\contact.html">Contact</a> |
+        <a href=".\register.html">Register</a>
+    </nav>
+    <!-- Name Section -->
+    <div id="nameSection">
+        <p>Please enter your name:</p>
+        <input type="text" id="username" placeholder="Your Name">
+        <button onclick="saveName()">Submit</button>
+    </div>
+
+    <!-- Congratulatory Message -->
+    <div id="congratsMessage"></div>
+    
+    <!-- Your existing HTML here... -->
+    <footer>
+        <p>© 2024 Stop Being Single and Mingle</p>
+    </footer>
+    <script>
+        // Save the name entered by the user
+        function saveName() {
+        var name = document.getElementById('username').value;
+        console.log('User name is: ' + name);
+        document.getElementById('nameSection').style.display = "none";
+        var congratsMessage = document.getElementById('congratsMessage');
+        congratsMessage.innerHTML = "Welcome to my Website, " + name + " !😁😁" + "<br><br>Please register now, " + name + " to find your right one❤️❤️!";
+        congratsMessage.style.display = "block"; // Show the message
+    }
+    </script>
+</body>
+</html>
